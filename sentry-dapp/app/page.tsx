@@ -112,7 +112,7 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="bg-gray-800 text-white text-center py-6">
-        <p>&copy; {new Date().getFullYear()} Synapse </p>
+        <p>&copy; {new Date().getFullYear()} Sentry </p>
         
       </footer>
     </div>
