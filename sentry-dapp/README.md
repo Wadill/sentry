@@ -1,2 +1,2 @@
-## Synapse frontend 
+## sentry frontend 
  
