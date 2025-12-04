@@ -49,7 +49,9 @@ export default function Home() {
           >
             <h2 className="text-2xl font-semibold text-blue-600 mb-4">What it Does</h2>
             <p className="text-gray-700">
-              0G is a decentralized AI-powered healthcare management app that empowers patients and providers with secure, transparent medical record storage, AI-driven diagnostics, and verifiable data sharing via Intelligent NFTs (INFTs) on the 0G blockchain.
+              Sentry is a decentralized AI-powered healthcare management app that empowers patients and providers with secure, 
+              transparent medical record storage, 
+              AI-driven diagnostics, and verifiable data sharing via Intelligent NFTs (INFTs) on the Celo chain.
             </p>
           </motion.div>
 
@@ -62,7 +64,9 @@ export default function Home() {
           >
             <h2 className="text-2xl font-semibold text-blue-600 mb-4">The Problem it Solves</h2>
             <p className="text-gray-700">
-              It addresses the lack of privacy, accessibility, and trust in traditional healthcare systems by offering a decentralized platform where patients control their data, healthcare providers access real-time insights, and AI diagnostics enhance treatment accuracy—all while mitigating data breaches and centralized control.
+              It addresses the lack of privacy, accessibility, and trust in traditional healthcare systems by offering a 
+              decentralized platform where patients control their data, healthcare providers access real-time insights, and 
+              AI diagnostics enhance treatment accuracy—all while mitigating data breaches and centralized control.
             </p>
           </motion.div>
 
@@ -74,9 +78,32 @@ export default function Home() {
             className="p-6"
           >
             <h2 className="text-2xl font-semibold text-blue-600 mb-4">Challenges I Ran Into</h2>
-            <p className="text-gray-700">
-              Integrating 0G’s modular services (Storage, Compute, DA) with Next.js proved complex due to limited documentation. Ensuring secure encryption for medical data on 0G Storage required extensive testing. Balancing AI inference speed on 0G Compute with cost efficiency was another hurdle.
-            </p>
+            <ul className="list-disc text-gray-700 space-y-2">
+              <li>
+              <p>
+                 Making a full-featured health app feel instant and native inside Farcaster's embedded browser 
+                 (with its strict size limits, no persistent storage, and flaky back-button behavior).  
+              </p>
+            </li>
+            <li>
+               <p>
+                 Achieving sub-3-second AI responses for diagnostics — we had to move from heavy server-side 
+                 models to aggressive on-device inference + Groq fallback, all while keeping data encrypted 
+                 and never leaving the user's control.  
+               </p>
+            </li>
+            <li>
+               <p>
+                 Handling file uploads (PDFs, images) on mobile connections inside a Frame without the user ever 
+                 seeing a spinner longer than 4 seconds (solved with chunked uploads to nft.storage + progress feedback).  
+               </p>
+            </li>
+            <li>
+              <p>
+                 Preventing spam and fake record uploads — implemented Neynar signed-message verification + on-chain allowlist for minting INFTs.  
+              </p>
+            </li>
+            </ul>
           </motion.div>
 
           {/* Technologies I Used */}
@@ -89,9 +116,20 @@ export default function Home() {
             <h2 className="text-2xl font-semibold text-blue-600 mb-4">Technologies I Used</h2>
             <ul className="list-disc list-inside text-gray-700 space-y-2">
               <li><strong>Frontend:</strong> Next.js (React framework), Tailwind CSS (styling), TypeScript (type safety).</li>
-              <li><strong>Blockchain:</strong> 0G Chain (EVM-compatible), 0G Storage, 0G Compute, 0G Data Availability.</li>
-              <li><strong>Development Tools:</strong> Hardhat (smart contracts), Ethers.js (blockchain interaction), RainbowKit (wallet integration), 0G SDKs.</li>
-              <li><strong>AI:</strong> 0G Compute for running diagnostic models.</li>
+              <li><strong>Blockchain:</strong> Celo Mainnet & Alfajores – instant finality, $0.001 fees, mobile-first  
+                    viem + wagmi v2 – modern, lightweight blockchain toolkit  
+                    RainbowKit + custom Celo/Valora connectors – one-tap wallet connection
+              </li>
+              <li><strong>Social & Identity Layer:</strong> Farcaster Frames (validated server-side with Neynar)  
+                  Sign-in with Farcaster (Neynar API) – no email, no password, just one tap
+              .</li>
+              <li><strong>AI & Diagnostics</strong> TensorFlow.js – on-device inference for sub-second responses  
+                  Groq / Mistral API – fast fallback for complex analysis  
+                  Custom lightweight health models (symptom checker, report parser)
+              </li>
+              <li><strong>Encryption & Storage:</strong> Lit Protocol – client-side encryption/decryption (data never leaves the device unencrypted)  
+                   nft.storage / IPFS – permanent, decentralized file storage for encrypted records
+              </li>
             </ul>
           </motion.div>
 
@@ -103,9 +141,40 @@ export default function Home() {
             className="p-6 md:col-span-2"
           >
             <h2 className="text-2xl font-semibold text-blue-600 mb-4">How We Built It</h2>
-            <p className="text-gray-700">
-              We started with a Next.js project setup, integrating Tailwind CSS and TypeScript for a sleek UI. Smart contracts were crafted using Solidity and deployed via Hardhat on 0G Chain to manage INFTs and permissions. 0G Storage handled encrypted data, while 0G Compute powered AI diagnostics. APIs bridged frontend and blockchain services, with RainbowKit enabling secure wallet access. Iterative testing on the 0G testnet refined the build.
-            </p>
+            <ul className="list-disc space-y-2">
+              <li>
+                <p className="text-gray-700">
+                 Built the entire experience as a production-grade Farcaster Frame using Neynar's signed-message validation 
+                 and Warpcast-native UX patterns. 
+                 </p>
+              </li>
+              <li>
+                <p>
+                 Integrated Celo (Alfajores → Mainnet) with wagmi + viem + RainbowKit custom connectors so Valora and every 
+                 Celo wallet connects in one tap — zero seed phrases, zero friction.  
+                 Added Lit Protocol for client-side encryption: every medical file (PDFs, images, reports) is encrypted in the 
+                 browser before it ever leaves the phone.  
+                </p>
+              </li>
+              <li>
+                <p>
+                  Stored encrypted files on IPFS/nft.storage and pinned the CID + decryption key inside a dynamic Intelligent NFT (INFT) minted 
+                  on Celo.  
+                 </p>
+              </li>
+              <li>
+                <p> 
+                  Implemented on-device AI diagnostics (TensorFlow.js) for instant responses + Groq/Mistral fallback for heavier analysis — all 
+                  while keeping raw data fully encrypted and never touching our servers. 
+                 </p>
+              </li>
+              <li>
+                <p>
+                   Built a Frame-native chat interface (“Ask my records”) that works entirely inside Warpcast with sub-3-second responses.  
+                   Added revocable sharing: doctors send a signed Farcaster message → patient approves → Lit generates a time-limited decryption link.              
+                </p>
+              </li>
+            </ul>
           </motion.div>
         </div>
       </section>
