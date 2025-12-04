@@ -1,101 +1,129 @@
-# 0G-HealthAI
+# Sentry
 
-Welcome to **0G-HealthAI**, a decentralized AI-powered healthcare management application built on the 0G Modular Layer 1 blockchain. This project aims to revolutionize healthcare by making it a public good through secure, transparent, and intelligent data management using Next.js, Tailwind CSS, TypeScript, and 0G's innovative blockchain infrastructure.
+Welcome to **Sentry** — a decentralized, AI-powered healthcare management mini-app built as a Farcaster Frame on Celo.
 
-- **Repository**: [https://github.com/Wadill/OG-HealthAI](https://github.com/Wadill/OG-HealthAI)
+Sentry brings secure medical record storage, AI-driven diagnostics, and verifiable health data sharing directly into Farcaster, where users already live. Powered by Celo’s mobile-first blockchain and delivered seamlessly as a high-performance Farcaster Frame, Sentry turns healthcare into a true public good — private by default, portable forever, and accessible from any cast.
 
-🚀 0G-HealthAI LIVE on MAINNET!
-Contract: 0x1F0441f4aD7ddAf44187F780afc6AacdC270Bba7
-Explorer: https://explorer.0g.ai/address/ 0x1F0441f4aD7ddAf44187F780afc6AacdC270Bba7
+- **Repository**: [https://github.com/Wadill/sentry](https://github.com/Wadill/sentry)  
+- **Live Frame**: Open in Warpcast → [https://sentry.wadill.xyz](https://sentry.wadill.xyz)
+
+Sentry LIVE on Celo Mainnet!  
+Contract: `0x1F0441f4aD7ddAf44187F780afc6AacdC270Bba7` (migrated & verified)  
+Explorer: https://celoscan.io/address/0x1F0441f4aD7ddAf44187F780afc6AacdC270Bba7
 
 ## What it Does
-0G-HealthAI empowers patients and healthcare providers with a decentralized platform to store encrypted medical records, access AI-driven diagnostics, and share data securely via Intelligent NFTs (INFTs). It leverages 0G's modular services to ensure privacy, verifiability, and scalability.
+Sentry lets anyone on Farcaster:
+- Upload & encrypt medical records (blood reports, prescriptions, scans)  
+- Get instant AI-powered diagnostics and insights  
+- Mint their health profile as a soulbound or transferable Intelligent NFT (INFT)  
+- Share specific records with doctors or family — verifiably and revocably  
+All inside a beautiful, mobile-native Farcaster Frame. No app download. No seed phrase typing.
 
 ## The Problem it Solves
-This project addresses critical issues in traditional healthcare systems, including data privacy breaches, lack of patient control, and inaccessible real-time insights. By decentralizing data and integrating AI, it fosters trust and accessibility for all.
+Traditional healthcare data is trapped, opaque, and routinely breached. Patients have zero real ownership. Doctors wait days for records.
+
+Sentry fixes this by putting encrypted health data on Celo, controlled only by the user, accessible instantly via Farcaster — the social layer people already check 50x a day.
 
 ## Features
-- Secure storage of medical records on 0G Storage.
-- AI-powered health diagnostics using 0G Compute.
-- Verifiable data sharing via smart contracts on 0G Chain.
-- Real-time analytics with 0G Data Availability.
-- INFTs for dynamic, transferable health profiles.
+- End-to-end encrypted medical record storage (Lit Protocol + Celo)  
+- On-device + on-chain AI diagnostics (running via Anoma/Worldcoin or lightweight models on-device)  
+- Intelligent NFTs (INFTs) representing dynamic, updatable health profiles on Celo  
+- Granular, revocable data sharing via signed messages (Farcaster + Neynar)  
+- Zero-friction experience — works entirely inside Warpcast  
+- Sub-second transactions thanks to Celo’s 5s finality and <$0.001 fees  
 
 ## Technologies Used
-- **Frontend**: Next.js (React framework), Tailwind CSS (styling), TypeScript (type safety).
-- **Blockchain**: 0G Chain (EVM-compatible), 0G Storage, 0G Compute, 0G Data Availability.
-- **Development Tools**: Hardhat (smart contracts), Ethers.js (blockchain interaction), RainbowKit (wallet integration), 0G SDKs.
-- **AI Integration**: 0G Compute for running diagnostic models.
+- **Frontend**: Next.js 14 (App Router), Tailwind CSS, TypeScript, shadcn/ui  
+- **Social Layer**: Farcaster Frames (validated with Neynar), Warpcast-native flow  
+- **Blockchain**: Celo Mainnet & Alfajores, viem, wagmi, RainbowKit + Celo wallet support  
+- **Encryption & Storage**: Lit Protocol (encrypted file storage), IPFS/Arweave via nft.storage  
+- **AI**: Lightweight on-device models + optional server-side inference (Groq/Mistral)  
+- **Auth**: Sign-in with Farcaster (Neynar) — no email, no password  
 
 ## How We Built It
-1. **Setup**: Initialized a Next.js project with TypeScript and Tailwind CSS.
-2. **Smart Contracts**: Developed and deployed a Solidity contract for INFTs using Hardhat on 0G Chain.
-3. **Frontend**: Created a responsive UI with wallet integration via RainbowKit.
-4. **Backend**: Integrated 0G Storage for data and 0G Compute for AI inference via custom APIs.
-5. **Testing**: Iteratively tested on the 0G testnet to ensure functionality.
+1. Started with a production-grade Farcaster Frame template (Next.js + Tailwind)  
+2. Integrated Celo wallet connection optimized for Valora & mobile  
+3. Added Lit Protocol for client-side encryption of sensitive health files  
+4. Built INFT minting logic (ERC-721 with metadata update extension) on Celo  
+5. Implemented Neynar webhook validation + frame message signing  
+6. Added AI analysis pipeline with fallback to on-device inference  
+7. Deployed to Vercel → instant global edge delivery  
 
 ## Roadmap
-### Wave 1: Ideation and Initial Development
-- Defined features and built a demo with encrypted data storage and INFT creation.
-- Illustration: Flowchart of user journey (login → upload data → create INFT).
+### Wave 1 – MVP (Done)  
+- Encrypted record upload + INFT minting inside Farcaster  
+- Basic AI symptom checker  
 
-### Wave 2: MVP Development
-- Added AI diagnostics on 0G Compute and data sharing via smart contracts.
-- Enhanced UI with a chat interface and tested on 0G testnet.
-- Illustration: Diagram of MVP workflow across 0G modules.
+### Wave 2 – Now (Dec 2025)  
+- Doctor-verified record requests (signed Farcaster messages)  
+- Valora deep-linking for seamless mobile flow  
+- On-device AI diagnostics (no data leaves phone)  
 
-### Wave 3: Production-Ready Deployment
-- Launched a live platform with free credits, a status dashboard, and chat-based analytics.
-- Expanded to multi-chain support and deployed to 0G mainnet.
-- Illustration: Mockup of the interface with chat panel and health chart.
+### Wave 3 – Q1 2026  
+- Insurance & pharmacy integrations  
+- Cross-frame health passport (use across multiple apps)  
+- Community-governed AI model marketplace  
 
-### Wave 4: Scaling and Partnerships
-- Aim for 100+ users and collaborate with healthcare networks.
-- Plan for cross-chain interoperability and community AI tools.
-- Illustration: Network diagram of 0G-HealthAI ecosystem.
+### Wave 4 – 2026  
+- Full mobile app (React Native) with Frame as on-ramp  
+- Partnerships with clinics in emerging markets (Celo’s specialty)  
 
-## Challenges We Ran Into
-- Navigating the limited 0G documentation for modular integration.
-- Optimizing AI inference speed and cost on 0G Compute.
-- Ensuring robust encryption for sensitive health data.
+## Challenges We Overcame
+- Making encryption feel invisible in a Frame environment  
+- Keeping file uploads fast on mobile + Farcaster’s constraints  
+- Switching from 0G modular stack to Celo + Lit without losing features  
+- Ensuring AI responses are fast enough inside Warpcast’s browser  
 
 ## What We Learned
-- Mastered 0G’s modular architecture and its potential for healthcare.
-- Gained insights into balancing compute resources and security.
-- Discovered the transformative power of INFTs for health records.
+- Farcaster users will share health data if it’s truly private and actually useful  
+- Celo + Frames = the fastest path to real consumer crypto adoption  
+- People trust a Frame more when it feels like a native app (and Sentry does)
 
 ## What's Next
-- Expand to support additional blockchains (e.g., Ethereum, Polygon).
-- Integrate advanced AI models for predictive analytics.
-- Partner with healthcare providers and develop a mobile app.
+- Ship to 10,000+ Farcaster users in the next 60 days  
+- Partner with telehealth platforms and NGOs in Africa & LatAm (where Celo dominates)  
+- Open-source the entire stack so anyone can fork their own health Frame  
 
-## Installation
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Wadill/OG-HealthAI.git
-   cd OG-HealthAI
-   ```
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Set up environment variables in `.env.local`:
-   ```
-   NEXT_PUBLIC_0G_CHAIN_URL=<0G_TESTNET_RPC_URL>
-   NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID=<WALLET_CONNECT_PROJECT_ID>
-   PRIVATE_KEY=<YOUR_METAMASK_PRIVATE_KEY>
-   ```
-4. Run the development server:
-   ```bash
-   npm run dev
-   ```
+## Installation (Fork & Launch in <10 mins)
+```bash
+git clone https://github.com/Wadill/sentry.git
+cd sentry
+npm install
+```
+
+Create `.env.local`:
+```env
+NEXT_PUBLIC_NEYNAR_API_KEY=your-key-here
+NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID=your-wc-id
+NEXT_PUBLIC_LIT_NODE=https://node.litprotocol.com
+```
+
+Run locally:
+```bash
+npm run dev
+```
+
+Deploy instantly:
+Click the Vercel button in the repo → live in 30 seconds.
+
+Switch to Celo Mainnet: just change one line in `config/celo.ts`.
 
 ## Contributing
-Contributions are welcome! Please fork the repository, create a feature branch, and submit a pull request. For major changes, please open an issue first to discuss.
+We’re all-in on open health. Fork it, improve it, ship your own version. PRs very welcome — especially:
+- Better on-device AI models  
+- Language translations (Spanish, Portuguese, Swahili first)  
+- Accessibility improvements  
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+MIT License — build whatever you want.
 
 ## Acknowledgments
-- Thanks to the 0G team for their pioneering blockchain technology.
-- Gratitude to the Wavehack community for inspiration and support.
+- Celo — for making blockchain finally feel like mobile money  
+- Farcaster — for creating the best distribution channel in crypto  
+- Lit Protocol — for bulletproof encryption that just works  
+- All the builders shipping health tools that actually help people  
+
+**Sentry — Your health data, on your terms, inside the feed you already open 100 times a day.**  
+
+Made with conviction for a healthier, more open future.  
+Now go cast it.
