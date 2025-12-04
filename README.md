@@ -91,7 +91,7 @@ cd sentry
 npm install
 ```
 
-Create `.env.local`:
+Create `.env.local`: 
 ```env
 NEXT_PUBLIC_NEYNAR_API_KEY=your-key-here
 NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID=your-wc-id

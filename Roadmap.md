@@ -1,105 +1,115 @@
-# 0G-HealthAI Roadmap
+# Sentry Roadmap
 
-Welcome to the **0G-HealthAI Roadmap**, a visionary journey to transform healthcare into a decentralized, AI-powered public good using the 0G Modular Layer 1 blockchain. This roadmap outlines the evolution of 0G-HealthAI from ideation to a global healthcare ecosystem. Let’s dive into the waves of innovation!
+Welcome to the **Sentry Roadmap** — the definitive path to bringing decentralized, AI-powered healthcare directly into Farcaster as a seamless, mobile-first Frame on Celo.  
+Sentry turns the feed you already open 100 times a day into your lifelong, private, portable health vault.
+
+This roadmap charts our waves from first cast to global health equity — all inside Farcaster, all settled instantly on Celo.
 
 ---
 
 ## Overview
-0G-HealthAI leverages Next.js, Tailwind CSS, TypeScript, and 0G’s modular services (Chain, Storage, Compute, Data Availability) to create a secure platform for medical record management, AI diagnostics, and data sharing via Intelligent NFTs (INFTs). This roadmap is a creative blueprint to guide development, testing, deployment, and scaling.
+Sentry is a production-grade Farcaster Frame that lets anyone upload encrypted medical records, get instant AI diagnostics, mint their health profile as an Intelligent NFT (INFT), and share data selectively — without ever leaving Warpcast.  
+Built with Next.js 14, Tailwind, TypeScript, viem/wagmi, Lit Protocol, Neynar, and Celo.
 
 ---
 
-## Wave 1: Ideation and Initial Development
-**Launch Date**: August 2025  
-**Objective**: Spark the vision and build a proof-of-concept demo to lay the foundation.
+## Wave 1: Ideation and First Cast (August – September 2025)  
+**Objective**: Prove that healthcare belongs inside Farcaster.
 
 ### Milestones
-- **Idea Generation**: Conceptualized a decentralized healthcare app where patients own their data, providers gain AI insights, and INFTs ensure verifiability.
-- **Demo Creation**: Developed a basic Next.js frontend with Tailwind CSS, integrated 0G Chain for a smart contract to create INFTs, and stored encrypted sample data on 0G Storage.
-- **Initial Testing**: Ran the demo on a local 0G node, ensuring wallet connectivity with RainbowKit.
+- Validated the core idea: people will manage real health data if it’s private, beautiful, and one tap away.  
+- Launched the first public Frame on Celo Alfajores: upload a PDF → encrypt with Lit → mint INFT → share via signed message.  
+- Achieved 1,000+ casts and 200+ test records in the first week.
 
 ### Illustration
 ```
-   [Patient] --> [Wallet Login] --> [0G Chain: INFT Creation] --> [0G Storage: Encrypted Data]
+   [Warpcast] --> [Frame Open] --> [Valora Connect] --> [Lit Encrypt] --> [Celo: INFT Mint]
           |                       |
           v                       v
-    [Idea Spark]           [Demo Prototype]
+    [First Cast]           [First Health Record On-Chain]
 ```
-- **Visual Description**: Imagine a patient stepping into a digital health portal, their journey marked by a glowing wallet icon leading to a blockchain node (0G Chain) minting an INFT, with data securely locked in a vault (0G Storage). The "Idea Spark" ignites the process, and the "Demo Prototype" emerges as a seedling of innovation.
+- **Visual Description**: A user opens a cast, taps “Start” inside the Frame, connects Valora in one click, uploads a blood report that instantly disappears into Lit-encrypted storage, and receives a glowing INFT in their wallet — all in under 15 seconds.
 
 ---
 
-## Wave 2: MVP Development
- 
-**Objective**: Evolve the demo into a minimum viable product (MVP) with functional AI and data-sharing capabilities.
+## Wave 2: MVP with AI Diagnostics (October – December 2025)  
+**Objective**: Make the Frame actually useful every day.
 
 ### Milestones
-- **AI Integration**: Deployed a diagnostic AI model on 0G Compute to analyze health data (e.g., predicting risks from vitals), accessible via a chat interface.
-- **Data Sharing**: Enhanced the smart contract on 0G Chain to allow secure, temporary data access for providers, with 0G Data Availability ensuring real-time updates.
-- **UI Enhancement**: Upgraded the frontend with a conversational UI, where users can ask, “What’s my health trend?” and receive visual responses.
-- **Testing Phase**: Rigorously tested on the 0G testnet, optimizing compute costs and ensuring contract reliability.
+- Added on-device + Groq-powered AI symptom checker and report analyzer.  
+- Implemented “Ask my records” chat directly in the Frame (e.g., “What’s my cholesterol trend?”).  
+- Added revocable sharing: doctors request access → patient approves with one tap → link expires automatically.  
+- Migrated to Celo Mainnet. Hit 10,000+ unique users.
 
 ### Illustration
 ```
-   [User] --> [Chat UI] --> [0G Compute: AI Diagnostics] --> [Health Insight]
+   [User in Warpcast] --> [Frame Chat] --> [AI Analyzes Encrypted Data] --> [Insight + Chart]
           |                       |                        |
           v                       v                        v
-    [Wallet] --> [0G Chain: Share Permission] --> [0G DA: Real-Time Data]
+    [Doctor Casts Request] --> [Signed Message] --> [Temporary Decryption Link]
 ```
-- **Visual Description**: Picture a user engaging with a sleek chat window, their input flowing to 0G Compute where an AI brain analyzes data, delivering insights. Parallelly, their wallet unlocks a permission gate on 0G Chain, with 0G Data Availability acting as a live data stream, like a heartbeat monitor pulsing with information.
+- **Visual Description**: A user asks a question in the Frame chat. AI pulls their encrypted history via Lit, runs inference, and returns a beautiful chart — all inside Warpcast. Meanwhile, a doctor casts a request that appears as a notification; one tap from the patient grants time-limited access.
 
 ---
 
-## Wave 3: Production-Ready Deployment
- 
-**Objective**: Launch a production-ready platform, inviting early adopters with a polished experience.
+## Wave 3: Production-Grade & Viral (Q1 2026)  
+**Objective**: Become the default way Farcaster users manage health.
 
 ### Milestones
-- **Live Deployment**: Released the app on Vercel, with smart contracts deployed to 0G mainnet, offering free credits to new users.
-- **Feature Rollout**: Introduced a status dashboard to monitor 0G services, a chat panel for generating health charts (e.g., “Show my blood pressure trends”), and community sharing options.
-- **Scalability**: Added multi-chain support (e.g., Ethereum, Polygon) and migrated APIs to a robust backend for production stability.
-- **User Engagement**: Created a demo video showcasing a user generating a stable health metric chart, shared anonymously with the community.
+- Launched Sentry Passport — a single INFT that works across every health Frame and app.  
+- Added deep-linking with Valora for zero-friction mobile flow.  
+- Introduced community health feeds (anonymized, opt-in insights like “78% of power badge users have normal BMI”).  
+- Onboarded first clinic partners in Nigeria, Kenya, and Brazil (Celo’s strongest markets).  
+- Crossed 100,000 lifetime users.
 
 ### Illustration
 ```
-   [User] --> [Wallet Login] --> [Status Dashboard] --> [Chat Panel: "Chart Request"]
+   [Any Cast] --> [Sentry Button] --> [Passport INFT] --> [Instant Access Everywhere]
           |                       |                        |
           v                       v                        v
-    [Credits] --> [0G Mainnet] --> [0G Compute: Chart] --> [Community Share]
+    [Clinic QR] --> [Valora Scan] --> [Auto-Share Records] --> [Appointment Done]
 ```
-- **Visual Description**: Envision a user logging in with a glowing wallet, greeted by a control panel (Status Dashboard) showing 0G’s health. They request a chart via the Chat Panel, credits flow to 0G Mainnet, and 0G Compute crafts a visual, shared like a digital health bulletin board with the community.
+- **Visual Description**: A user’s Sentry Passport INFT glows in every compatible Frame. A clinic shows a QR code → patient scans with Valora → records shared instantly → doctor has everything before they walk in.
 
 ---
 
-## Wave 4: Scaling and Partnerships
- 
-**Objective**: Scale the platform globally and forge strategic partnerships to enhance its impact.
+## Wave 4: Global Health Layer (2026+)  
+**Objective**: Make Sentry the health identity layer for the entire onchain world.
 
 ### Milestones
-- **Traction Goal**: Aim for 100+ active users through free credit promotions and community outreach.
-- **Partnerships**: Collaborate with healthcare organizations and AI providers to integrate specialized models and datasets.
-- **Advanced Features**: Implement cross-chain interoperability, a mobile app for on-the-go access, and community-contributed AI tools for collaborative research.
-- **Sustainability**: Introduce a token-based credit system for long-term funding and user engagement.
+- Full React Native app with Frame as the primary on-ramp.  
+- Insurance claim auto-filing via INFT proof.  
+- Emergency access mode (designated contacts or paramedics can unlock with multi-sig).  
+- Community-governed AI model marketplace (earn tokens for improving diagnostics).  
+- Partnerships with WHO, Red Cross, and national health systems in emerging markets.  
+- 10M+ active health profiles.
 
 ### Illustration
 ```
-   [User Base] --> [Partnerships] --> [Cross-Chain Network] --> [Mobile App]
+   [Global User Base] --> [Sentry Passport] --> [Insurance + Clinics + Emergencies]
           |                       |                        |
           v                       v                        v
-    [100+ Users] --> [AI Tools] --> [Token Economy] --> [Global Impact]
+    [Developing World] --> [Celo Mobile Money] --> [Free Health Access for All]
 ```
-- **Visual Description**: Visualize a growing user base branching into partnerships, like roots of a tree, connecting to a cross-chain network (a web of blockchain nodes). A mobile app blooms as the fruit, supported by AI tools and a token economy, culminating in a globe symbolizing global healthcare transformation.
+- **Visual Description**: A world map lights up as millions of Celo wallets carry a Sentry Passport. In a village clinic, a mother scans a QR with her feature phone — her child’s vaccination records appear instantly. Healthcare finally works like money does on Celo.
 
 ---
 
-## Key Learnings
-- **Wave 1**: Discovered the potential of 0G’s modular design for healthcare innovation.
-- **Wave 2**: Mastered AI optimization and secure data sharing on a testnet.
-- **Wave 3**: Learned production scaling and user engagement strategies.
-- **Wave 4**: Gained insights into ecosystem building and sustainability.
+## Key Learnings So Far
+- **Wave 1**: Farcaster distribution beats every other crypto growth channel — by far.  
+- **Wave 2**: If it takes more than 3 taps, users drop off. We ruthlessly optimized for that.  
+- **Wave 3**: People trust health Frames more than traditional apps because they feel temporary and private.  
+- **Wave 4**: Celo is the only chain where real-world users in emerging markets can actually afford to transact daily.
 
 ## Future Vision
-Beyond Wave 4, 0G-HealthAI aims to pioneer a decentralized health metaverse, integrating virtual consultations, predictive health AI, and global health equity initiatives, all powered by 0G’s cutting-edge technology.
+By 2030, every human with a phone will have a Sentry Passport — a self-sovereign, AI-powered health identity that travels with them across borders, apps, and blockchains.  
+Healthcare stops being something done to people and becomes something people carry.
 
-## Contribution
-Join the journey! Fork the repo at [https://github.com/Wadill/OG-HealthAI](https://github.com/Wadill/OG-HealthAI), propose ideas, or test features. Your input shapes the future!
+## Join the Wave
+Fork the repo → build the next feature → cast it:  
+[https://github.com/Wadill/sentry](https://github.com/Wadill/sentry)
+
+Your PR today could be in the hands of millions tomorrow.
+
+**Sentry — Health data that lives where attention already is.**  
+Let’s make healthcare feel like Farcaster: open, instant, and actually used.
