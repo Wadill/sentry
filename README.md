@@ -11,6 +11,8 @@ Sentry LIVE on Celo Mainnet!
 Contract: `0x1F0441f4aD7ddAf44187F780afc6AacdC270Bba7` (migrated & verified)  
 Explorer: https://celoscan.io/address/0x1F0441f4aD7ddAf44187F780afc6AacdC270Bba7
 
+https://youtu.be/GE6oU1MB_bs
+
 ## What it Does
 Sentry lets anyone on Farcaster:
 - Upload & encrypt medical records (blood reports, prescriptions, scans)  
